@@ -1,0 +1,24 @@
+.nav {
+    width: 100%;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-items ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+.nav-items li {
+    padding: 0 .5rem;
+}
+
+.nav-items a {
+    text-decoration: none;
+}

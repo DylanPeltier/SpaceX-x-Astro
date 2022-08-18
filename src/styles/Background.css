@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+section {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('./../../public/Homepage_Desktop.webp');
+    z-index: -1;
+}

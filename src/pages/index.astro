@@ -1,6 +1,7 @@
 ---
-import NavBar from '../components/Navbar';
-import '../styles/Background.css';
+import AstroNavbar from '../components/Navbar.astro';
+import '../styles/index.css';
+import '../styles/SectionOne.css';
 ---
 
 <html lang="en">
@@ -11,11 +12,9 @@ import '../styles/Background.css';
 		<title>Astro</title>
 	</head>
 	<body>
-		<section class="section">
-			<div class="background"/>
-			<div class="container">
-				<NavBar />
-			</div>
+		<section>
+			<AstroNavbar />
+			<div class="background"></div>
 		</section>
 	</body>
 </html>

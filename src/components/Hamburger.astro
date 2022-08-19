@@ -1,0 +1,21 @@
+---
+---
+
+<script is:inline>
+    function navToggle() {
+        const btn = document.getElementById("menu-btn");
+        const overlay = document.getElementById("overlay");
+        const menu = document.getElementById("side-menu");
+
+        btn.classList.toggle("open");
+        overlay.classList.toggle("show-overlay");
+        document.body.classList.toggle("no-scroll");
+        menu.classList.toggle("show-menu");
+    }
+</script>
+
+<button onclick="navToggle()" id="menu-btn" class="ham" type="button">
+    <span class="ham-top"> </span>
+    <span class="ham-mid"> </span>
+    <span class="ham-bot"> </span>
+</button>

@@ -1,7 +1,6 @@
 ---
-import AstroNavbar from '../components/Navbar.astro';
-import '../styles/index.css';
-import '../styles/SectionOne.css';
+import "../styles/style.css";
+import HamBtn from "../components/Hamburger.astro";
 ---
 
 <html lang="en">
@@ -12,9 +11,218 @@ import '../styles/SectionOne.css';
 		<title>Astro</title>
 	</head>
 	<body>
-		<section>
-			<AstroNavbar />
-			<div class="background"></div>
+		<div id="overlay"></div>
+		<div id="side-menu" class="main-side-menu">
+			<ul>
+				<li>
+					<a href="#">Mission</a>
+				</li>
+				<li>
+					<a href="#">Launches</a>
+				</li>
+				<li>
+					<a href="#">Careers</a>
+				</li>
+				<li>
+					<a href="#">Updates</a>
+				</li>
+				<li>
+					<a href="#">Shop</a>
+				</li>
+
+				<li class="m-only">
+					<a href="/falcon9">Falcon 9</a>
+				</li>
+				<li class="m-only">
+					<a href="/falcon-heavy">Falcon Heavy</a>
+				</li>
+				<li class="m-only">
+					<a href="/dragon">Dragon</a>
+				</li>
+				<li class="m-only">
+					<a href="#">Starship</a>
+				</li>
+				<li class="m-only">
+					<a href="#">Human Spaceflight</a>
+				</li>
+				<li class="m-only">
+					<a href="#">Rideshare</a>
+				</li>
+				<li class="m-only">
+					<a href="#">Starlink</a>
+				</li>
+			</ul>
+		</div>
+		<div class="header">
+			<div class="logo">
+				<img src="../../img/logo.png" alt="SpaceX Logo" />
+			</div>
+			<div class="nav-menu">
+				<ul>
+					<li>
+						<a href="/falcon9">Falcon 9</a>
+					</li>
+					<li>
+						<a href="/falcon-heavy">Falcon Heavy</a>
+					</li>
+					<li>
+						<a href="/dragon">Dragon</a>
+					</li>
+					<li>
+						<a href="#">Starship</a>
+					</li>
+					<li>
+						<a href="#">Human Spaceflight</a>
+					</li>
+					<li>
+						<a href="#">Rideshare</a>
+					</li>
+					<li>
+						<a href="#">Starlink</a>
+					</li>
+					<li>
+						<a href="#">Shop</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<HamBtn />
+
+		<section class="sectionone">
+			<div class="section-inner">
+				<h4>Upcoming Launch</h4>
+				<h2>CRS-25 Mission</h2>
+				<a href="#" class="btn">
+					<div class="hover"></div>
+					<span>Rewatch</span>
+				</a>
+			</div>
+			<div class="arrow">
+				<svg width="30px" height="20px">
+					<path
+						stroke="#ffffff"
+						fill="none"
+						stroke-width="2px"
+						d="M2.000,5.000 L15.000,18.000 L28.000,5.000"></path>
+				</svg>
+			</div>
 		</section>
+
+		<section class="sectiontwo">
+			<div class="section-inner">
+				<h4>Recent Launch</h4>
+				<h2>Starlink Mission</h2>
+				<a href="#" class="btn">
+					<div class="hover"></div>
+					<span>Rewatch</span>
+				</a>
+			</div>
+			<div class="arrow">
+				<svg width="30px" height="20px">
+					<path
+						stroke="#ffffff"
+						fill="none"
+						stroke-width="2px"
+						d="M2.000,5.000 L15.000,18.000 L28.000,5.000"></path>
+				</svg>
+			</div>
+		</section>
+
+		<section class="sectionthree">
+			<div class="section-inner">
+				<h4>Recent Mission</h4>
+				<h2>SES-22 Mission</h2>
+				<a href="#" class="btn">
+					<div class="hover"></div>
+					<span>Rewatch</span>
+				</a>
+			</div>
+			<div class="arrow">
+				<svg width="30px" height="20px">
+					<path
+						stroke="#ffffff"
+						fill="none"
+						stroke-width="2px"
+						d="M2.000,5.000 L15.000,18.000 L28.000,5.000"></path>
+				</svg>
+			</div>
+		</section>
+
+		<section class="sectionfour">
+			<div class="section-inner">
+				<h4>Recent Launch</h4>
+				<h2>Globalstar FM15 Mission</h2>
+				<a href="#" class="btn">
+					<div class="hover"></div>
+					<span>Rewatch</span>
+				</a>
+			</div>
+			<div class="arrow">
+				<svg width="30px" height="20px">
+					<path
+						stroke="#ffffff"
+						fill="none"
+						stroke-width="2px"
+						d="M2.000,5.000 L15.000,18.000 L28.000,5.000"></path>
+				</svg>
+			</div>
+		</section>
+
+		<section class="sectionfive">
+			<div class="section-inner">
+				<h2>Starship Update</h2>
+				<a href="#" class="btn">
+					<div class="hover"></div>
+					<span>Rewatch</span>
+				</a>
+			</div>
+			<div class="arrow">
+				<svg width="30px" height="20px">
+					<path
+						stroke="#ffffff"
+						fill="none"
+						stroke-width="2px"
+						d="M2.000,5.000 L15.000,18.000 L28.000,5.000"></path>
+				</svg>
+			</div>
+		</section>
+
+		<section class="sectionsix">
+			<div class="section-inner">
+				<h2>Starship to add NASA astronauts on the moon</h2>
+				<a href="#" class="btn">
+					<div class="hover"></div>
+					<span>Rewatch</span>
+				</a>
+			</div>
+		</section>
+
+		<div class="footer">
+			<ul>
+				<li>SpaceX &copy; 2022</li>
+				<li>
+					<a href="#">Twitter</a>
+				</li>
+				<li>
+					<a href="#">YouTube</a>
+				</li>
+				<li>
+					<a href="#">Instagram</a>
+				</li>
+				<li>
+					<a href="#">Flickr</a>
+				</li>
+				<li>
+					<a href="#">LinkedIn</a>
+				</li>
+				<li>
+					<a href="#">Privacy</a>
+				</li>
+				<li>
+					<a href="#">Suppliers</a>
+				</li>
+			</ul>
+		</div>
 	</body>
 </html>

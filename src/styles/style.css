@@ -1,0 +1,396 @@
+@import url('http://fonts.cdnfonts.com/css/d-din');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'D-DIN';
+    background: #000;
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.logo svg {
+    fill: #fff;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    height: 100px;
+    padding: 0 30px;
+}
+
+.logo {
+    width: 210px;
+    height: auto;
+}
+
+.logo img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.nav-menu {
+    margin-right: 50px;
+}
+
+.nav-menu ul {
+    display: flex;
+}
+
+.nav-menu ul li {
+    position: relative;
+    margin-right: 20px;
+    padding-bottom: 2px;
+}
+
+.nav-menu ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    transform: scaleX(0);
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    transform-origin: right center;
+}
+
+.nav-menu ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+    transition-duration: 0.4s;
+}
+
+section {
+    position: relative;
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-transform: uppercase;
+}
+
+.section-inner {
+    position: absolute;
+    max-width: 560px;
+    bottom: 200px;
+    left: 150px;
+}
+
+.section-inner h4 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    font-weight: 300;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.section-inner h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    animation: fadeIn 0.5s ease-in-out 0.2s;
+    animation-fill-mode: both;
+}
+
+.section-inner a {
+    animation: fadeIn 0.5s ease-in-out 0.4s;
+    animation-fill-mode: both;
+}
+
+.sectionone {
+    background-image: url('../../img/section-a.webp');
+}
+
+.sectiontwo {
+    background-image: url('../../img/section-b.webp');
+}
+
+.sectionthree {
+    background-image: url('../../img/section-c.webp');
+}
+
+.sectionfour {
+    background-image: url('../../img/section-d.webp');
+}
+
+.sectionfive {
+    background-image: url('../../img/section-e.webp');
+}
+
+.sectionsix {
+    background-image: url('../../img/section-f.webp');
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    min-width: 130px;
+    margin-top: 10px;
+    border: 2px solid #fff;
+    padding: 15px 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.btn:hover span {
+    color: #000;
+}
+
+.btn .hover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #000;
+    background: #fff;
+    z-index: -1;
+    transform: translateY(100%);
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn:hover .hover {
+    transform: translateY(0);
+}
+
+.arrow {
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    animation: arrowBounce 5s infinite;
+}
+
+.footer {
+    position: relative;
+    padding: 55px 0;
+}
+
+.footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer ul li {
+    color: #aaa;
+    text-transform: uppercase;
+    margin-right: 30px;
+    font-size: 13px;
+    line-height: 2.5;
+}
+
+.footer ul li a {
+    color: #fff;
+    transition: color 0.6s;
+}
+
+.footer ul li a:hover {
+    color: #aaa;
+}
+
+.ham {
+    position: fixed;
+    right: 20px;
+    top: 40px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background: none;
+    border: none;
+    z-index: 10;
+}
+
+.ham-top,
+.ham-mid,
+.ham-bot {
+    width: 20px;
+    position: absolute;
+    height: 2px;
+    background: #fff;
+    left: 0;
+    top: 0;
+    transition: all 0.5s;
+}
+
+.ham-bot {
+    transform: translateY(10px);
+}
+
+.ham-mid {
+    transform: translateY(5px);
+}
+
+.open {
+    transform: rotate(90deg);
+}
+
+.open .ham-top {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .ham-mid {
+    display: none;
+}
+
+.open .ham-bot {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+
+.show-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.m-only {
+    display: none;
+}
+
+.main-side-menu {
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100%;
+    position: fixed;
+    z-index: 4;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.show-menu {
+    transform: translateX(0);
+}
+
+.main-side-menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    padding: 50px;
+    width: 100%;
+}
+
+.main-side-menu ul li {
+    width: 100%;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: right;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px #555 dotted;
+}
+
+.main-side-menu ul li a {
+    color: #fff;
+    transition: color 0.6s;
+}
+
+.main-side-menu ul li a:hover {
+    color: #aaa;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        transform: translateY(140px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes arrowBounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    40% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media(max-width: 960px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .m-only {
+        display: block;
+    }
+}
+
+@media(max-width: 600px) {
+    .section-inner {
+        left: 20px;
+        bottom: 75px;
+    }
+
+    .section-inner h2 {
+        font-size: 40px;
+    }
+
+    .footer ul li:first-child {
+        top: 30px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .footer ul li {
+        margin-right: 15px
+    }
+
+    .logo {
+        width: 150px;
+        height: auto;
+        margin: auto;
+    }
+}
